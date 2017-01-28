@@ -1,10 +1,17 @@
 import React from 'react';
+import Navbar from '../containers/Navbar';
 
 const Layout = (props) => {
   return props.auth ? (
-    <div>{props.children}</div>
+    <div>
+      <Navbar />
+      {props.children}
+    </div>
   ) : (
-    <div>not logged in :(</div>
+    <div>
+      <Navbar />
+      <p>not logged in</p>
+    </div>
   );
 };
 

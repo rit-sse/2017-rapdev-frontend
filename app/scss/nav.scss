@@ -1,0 +1,48 @@
+@import 'variables';
+
+.navbar-rapdev {
+  height: $NAV_HEIGHT;
+  background-color: $GREY;
+
+  .navbar-brand {
+    padding: 10px;
+    font-size: $NAV_HEIGHT - 20px;
+    line-height: $NAV_HEIGHT - 20px;
+    color: $BLACK;
+    float: left;
+  }
+
+  .navbar-user {
+    margin: 10px;
+    height: $NAV_HEIGHT - 20px;
+    background-color: inherit;
+    border: none;
+    float: right;
+    cursor: pointer;
+    color: $BLACK;
+    &:hover {
+      color: lighten($BLACK, 20%);
+    }
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: $NAV_HEIGHT - 10px;
+    padding: 5px;
+    right: 0;
+    width: 100px;
+    background-color: $WHITE;
+    border: 1px solid black;
+    border-radius: 5px;
+    &.opened {
+      display: block;
+    }
+  }
+
+  &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+  }
+}
