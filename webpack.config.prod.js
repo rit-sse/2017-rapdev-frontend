@@ -36,7 +36,7 @@ module.exports = {
     }),
     new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 8192 }),
     new HtmlWebpackPlugin({
-      title: 'Society of Software Engineers',
+      title: 'Team Room Reservation System',
       filename: '../index.html',
       template: './app/index.ejs',
     }),

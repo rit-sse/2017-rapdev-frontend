@@ -29,7 +29,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     new HtmlWebpackPlugin({
-      title: 'webpack2 boilerplate',
+      title: 'Team Room Reservation System',
       template: './app/index.ejs',
     }),
   ],
