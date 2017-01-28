@@ -1,7 +1,7 @@
 import React from 'react';
 import SubNav from '../components/SubNav';
 
-const Overview = () => (
+const Teams = () => (
   <div>
     <div className="row" style={{ paddingTop: '5%' }}>
       <div className="col-12 text-center">
@@ -11,4 +11,4 @@ const Overview = () => (
   </div>
 );
 
-export default Overview;
+export default Teams;
