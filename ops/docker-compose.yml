@@ -1,16 +1,17 @@
-web:
-  image: ritsse/teamroomfrontend
-  ports:
-    - 80:80
-    - 443:443
-  links:
-    - back
+version: '2'
+services:
+  web:
+    image: ritsse/teamroomfrontend
+    links:
+      - back
+    ports:
+      - 80:80
 
-back:
-  image: ritsse/teamroombackend
+  back:
+    image: ritsse/teamroombackend
 
-watch:
-  image: centurylink/watchtower
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+  watch:
+    image: centurylink/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
