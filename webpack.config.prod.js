@@ -18,19 +18,25 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: [
+      path.resolve('./app'),
+      'node_modules',
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
+        API_ROOT: JSON.stringify(process.env.API_ROOT || 'http://localhost:3000/api/v1/'),
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity,
     }),
+    new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 8192 }),
     new HtmlWebpackPlugin({
-      title: 'Webpack-React-Redux',
+      title: 'Society of Software Engineers',
       filename: '../index.html',
       template: './app/index.ejs',
     }),
@@ -49,7 +55,7 @@ module.exports = {
       sourceMap: false,
     }),
     new ExtractTextPlugin({
-      filename: '[chunkhash].bundle.css', 
+      filename: '[chunkhash].bundle.css',
       allChunks: true,
       sourceMap: false,
     }),
