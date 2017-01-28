@@ -1,0 +1,8 @@
+http://*:80 {
+  root ./dist/
+  rewrite {
+    if {path} not_match \/api/.*
+    if {file} not_match (.*\.js|.*\.html|.*\.css)
+    to /index.html
+  }
+}
