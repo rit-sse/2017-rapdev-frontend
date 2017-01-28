@@ -5,4 +5,10 @@ http://*:80 {
     if {file} not_match (.*\.js|.*\.html|.*\.css)
     to /index.html
   }
+
+  proxy /api {
+    upstream back:5000
+    without /api
+  }
+
 }
