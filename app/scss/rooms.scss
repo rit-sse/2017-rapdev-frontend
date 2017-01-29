@@ -9,6 +9,7 @@ $labRoomHeight: 300px;
 .team-room {
   flex-direction: column;
   border: 1px solid $grey-darker;
+  border-radius: 5px;
   color: $black;
   display: flex;
   flex-direction: column;
@@ -34,6 +35,7 @@ $labRoomHeight: 300px;
 .lab-room {
   align-content: center;
   background-color: $grey;
+  border-radius: 5px;
   bottom: 0;
   color: $black;
   display: flex;

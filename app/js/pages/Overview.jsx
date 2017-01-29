@@ -41,6 +41,7 @@ class Overview extends React.Component {
             <SubNav />
           </div>
         </div>
+        <h1>Room Status</h1>
         <div className="row" style={{ paddingTop: '5%'}}>
           <LabRoom name="The SSE" />
           <div className='col-6 team-rooms'>
