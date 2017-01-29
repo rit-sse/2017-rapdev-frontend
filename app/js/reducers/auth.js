@@ -7,6 +7,7 @@ export default function auth(state = { loggedIn: false }, action) {
         ...state,
         loggedIn: true,
         token: action.token,
+        user: action.user,
       };
     case SIGN_OUT:
       return {
