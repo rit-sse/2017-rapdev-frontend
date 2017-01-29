@@ -8,12 +8,12 @@ const initState = {
 export default (state = initState, action) => {
   switch (action.type) {
     case LOADING_STATUS:
-      if (state.loading.includes(action.payload.type)) return state;
+      if (state.loading.includes(action.type)) return state;
       return {
         ...state,
         loading: [
           ...state.loading,
-          action.payload.type,
+          action.type,
         ],
       };
     case ERROR_STATUS:
