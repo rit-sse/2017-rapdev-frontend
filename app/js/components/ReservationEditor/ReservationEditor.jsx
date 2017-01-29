@@ -1,6 +1,7 @@
 import React from 'react';
 
 import 'scss/reservationEditor.scss';
+import Calendar from 'js/components/Calendar';
 import RoomFeatureButtons from './subcomponents/RoomFeatureButtons';
 
 const sampleRoomFeatures = [
@@ -24,26 +25,27 @@ const sampleRoomFeatures = [
 
 class ReservationEditor extends React.Component {
   constructor(props) {
-    super(props);    
+    super(props);
   }
-
-
 
   render() {
     return (
       <div className="reservation-editor-container">
         <div className="container">
-          <div className="reservation-editor col-12">
-            <div 
-              className="close-button"
-              onClick={this.props.onCloseClick}
-            >
-              <i className="fa fa-close"></i>
+          <div className="reservation-editor row">
+            <div className="col-6">
+              <div
+                className="close-button"
+                onClick={this.props.onCloseClick}
+              >
+                <i className="fa fa-close"></i>
+              </div>
+              <h1>{this.props.title}</h1>
+              <RoomFeatureButtons features={sampleRoomFeatures} />
             </div>
-            <h1>{this.props.title}</h1>
-            <RoomFeatureButtons
-              features={sampleRoomFeatures}
-            />
+            <div className="col-6">
+              <Calendar />
+            </div>
           </div>
         </div>
       </div>

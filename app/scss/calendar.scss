@@ -1,0 +1,53 @@
+@import 'variables';
+
+.calendar {
+  float: left;
+  width: 90%;
+  height: 400px;
+  border: 1px solid black;
+  margin-top: 50px;
+  .day {
+    float: left;
+    width: (100% / 7);
+    height: 399px;
+    border-right: 1px solid black;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .weekday {
+    height: 25px;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  .hour {
+    cursor: pointer;
+    height: (373px / 12);
+    border-bottom: 1px solid black;
+    &:last-child {
+      border-bottom: none;
+    }
+    &.free {
+      background-color: $LIGHT_GREEN;
+    }
+    &.filled {
+      background-color: $LIGHT_RED;
+    }
+    &.selected {
+      background-color: $LIGHT_BLUE;
+    }
+    &.disabled {
+      cursor: default;
+    }
+  }
+}
+.times {
+  width: 10%;
+  float: left;
+  margin-top: 65px;
+  padding-right: 5px;
+  text-align: right;
+  .time {
+    height:(374px / 12);
+  }
+}
