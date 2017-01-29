@@ -23,9 +23,10 @@ export const createLoading = nameSpace => (type) => {
 
 export const api = (url, options = {}) => {
   return (dispatch, getState) => {
-    const token = '<token>'; // TODO store fetch
+    const token = getState().auth.token;
     const headers = Object.assign({}, {
-      'Authorization': 'bearer ' + token
+      'Authorization': 'bearer ' + token,
+      'content-type': 'application/json',
     }, options.headers);
     options.headers = headers;
     // TODO error check

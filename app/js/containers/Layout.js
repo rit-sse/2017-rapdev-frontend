@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 function mapStateToProps(store) {
   return {
-    auth: store.auth,
+    auth: store.auth.loggedIn,
   };
 }
 
