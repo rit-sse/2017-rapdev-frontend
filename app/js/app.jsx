@@ -6,6 +6,8 @@ import store from './store';
 import Layout from './containers/Layout';
 import asyncComponent from './components/asyncComponent';
 
+import 'scss/global.scss';
+
 if (module.hot) module.hot.accept();
 
 const Teams = asyncComponent(() => System.import('./pages/Teams'));
@@ -24,6 +26,6 @@ window.onload = () => {
         </Layout>
       </BrowserRouter>
     </Provider>,
-    document.getElementById('react'),
+    document.getElementById('react')
   );
 };

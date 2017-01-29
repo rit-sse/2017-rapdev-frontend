@@ -1,0 +1,104 @@
+@import 'variables';
+
+$tileColor: #E0E8E9;
+$tileAccentColor: #495859;
+$tileColorEmp: #DDF2F5;
+$tileAccentColorEmp: #70CCD9;
+
+
+.my-reservations-container {
+  & > h1 {
+    text-align: left;
+  }
+}
+
+.my-reservations-list {
+  background-color: $PRIMARY;
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #979797;
+}
+
+.reservation-tile {
+  background-color: $tileColor;
+  height: 75px;
+  border: solid 1px #979797;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  .delete-button {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    background-color: #F4F3F3;
+    height: 25px;
+    width: 25px;
+    border-radius: 30px;
+    border: solid 1px #979797;
+    text-align: center;
+    cursor: pointer;
+    z-index: 400;
+  }
+
+
+  
+  & > .accent {
+    display: inline-block;
+    height: 100%;
+    width: 20px;
+    background-color: $tileAccentColor;
+  }
+  &.emp {
+    background-color: $tileColorEmp;
+  }
+  .room-number {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    h1 {
+      vertical-align: middle;
+      margin-top: 13px;
+      margin-right: 15px;
+    }
+  }
+  & .info {
+    padding: 5px;
+    padding-left: 15px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: inline-block;
+    h1, h2, h3, h4, h5, h6 {
+      padding: 0;
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    h4 {
+      display: inline;
+    }
+
+    .date {
+      font-weight: 300;
+      color: #7C7A7A;
+    }
+
+    .time-range {
+      font-style: italic;
+      font-weight: 100;
+      color: #7C7A7A;
+      margin-left: 30px;
+    }
+
+    .room-number {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+

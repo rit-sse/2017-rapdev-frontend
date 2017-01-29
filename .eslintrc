@@ -1,24 +1,41 @@
 {
-  "extends": [
-    "airbnb",
-  ],
-  "parser": "babel-eslint",
-  "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true
-  },
-  "ecmaFeatures": {
-    "jsx": true,
-    "es6": true,
-    "classes": true
-  },
-  "rules": {
-     "comma-dangle": [1, "always-multiline"],
-     "no-underscore-dangle" : 0,
-     "max-len": [1, 180, 4],
-     "arrow-body-style": [0],
-     "react/jsx-no-bind": [0],
-     "import/no-unresolved": [0] // Until import plugin supports webpack 2 resolveModules
-  }
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error"
+    },
+    "globals": {
+        "__dirname": false
+    }
 }
