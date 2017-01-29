@@ -6,7 +6,13 @@ const server = new WebpackDevServer(webpack(config), {
   contentBase: './app',
   publicPath: config.output.publicPath,
   hot: true,
-  historyApiFallback: true
+  historyApiFallback: true,
+  proxy: {
+    // proxy all requests starting with /api to ssedec
+    '/api': {
+      target: 'http://ssedev.se.rit.edu'
+    }
+  }
 })
 
 server.listen(process.env.PORT || 5000, 'localhost', function (err) {
