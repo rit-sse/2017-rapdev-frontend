@@ -1,0 +1,29 @@
+@import 'variables';
+
+.login {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 10px;
+  border: 1px solid $BLACK;
+  border-radius: 5px;
+  .login-heading {
+    text-align: center;
+  }
+  .username {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid $GREY;
+    margin-bottom: 5%;
+    &:focus {
+      border: none;
+    }
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

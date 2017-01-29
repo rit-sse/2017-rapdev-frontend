@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Layout from '../components/Layout';
+import { signIn } from '../actions/auth';
 
 function mapStateToProps(store) {
   return {
@@ -7,4 +8,10 @@ function mapStateToProps(store) {
   };
 }
 
-export default connect(mapStateToProps)(Layout);
+function mapDispatchToProps(dispatch) {
+  return {
+    login: (user, pass) => dispatch(signIn(user, pass)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

@@ -1,12 +1,13 @@
 import React from 'react';
-import Navbar from '../containers/Navbar';
+import Navbar from '../components/Navbar';
+import Login from '../pages/Login';
 
 const Layout = (props) => {
   return (
     <div>
       <Navbar />
       <div className="container">
-        {props.auth ? props.children : <p>not logged in</p>}
+        {props.auth ? props.children : <Login login={props.login} />}
       </div>
     </div>
   );
@@ -14,6 +15,7 @@ const Layout = (props) => {
 
 Layout.propTypes = {
   auth: React.PropTypes.bool.isRequired,
+  login: React.PropTypes.func.isRequired,
   children: React.PropTypes.node.isRequired,
 };
 

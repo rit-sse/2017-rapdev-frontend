@@ -1,5 +1,4 @@
-{
-  "name": "react-webpack2",
+{ "name": "react-webpack2",
   "version": "1.0.0",
   "description": "boilerplate for a webpack2 react project",
   "main": "server.js",
