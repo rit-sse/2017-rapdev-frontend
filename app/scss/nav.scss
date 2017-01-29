@@ -38,6 +38,7 @@
     &.opened {
       display: block;
     }
+    z-index:100;
   }
 
   &:after {
