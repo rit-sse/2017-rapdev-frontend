@@ -1,10 +1,25 @@
 import React from 'react';
 
-const TeamRoom = props => (
-  <div className={`team-room ${props.status}`}>
-    {props.content.text || ''}
-  </div>
-);
+class TeamRoom extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+
+  }
+
+  render() {
+    return (
+      <div
+        className={`team-room ${this.props.status}`}
+        onClick={(e) => this.handleClick(e)}>
+        {this.props.content.text || ''}
+      </div>
+    );
+  }
+}
 
 TeamRoom.propTypes = {
   content: React.PropTypes.object,
