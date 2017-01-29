@@ -26,17 +26,14 @@ class TeamTile extends React.Component {
     });
   }
 
-  handleDeleteClick() {
+  handleDeleteClick(event) {
+    event.stopPropagation();
     this.props.onDeleteClick();
   }
 
   handleClick(event) {
     event.stopPropagation();
-    if (event.target.className === "fa fa-times"){
-      this.handleDeleteClick()
-    } else {
-      this.props.onClick(event);
-    }
+    this.props.onClick(event);
   }
 
   render() {
@@ -51,7 +48,7 @@ class TeamTile extends React.Component {
         {this.state.showDeleteButton ? (
           <div
             className="delete-button"
-            onClick={this.props.handleDeleteClick}
+            onClick={this.handleDeleteClick}
           >
             <i className="fa fa-times" aria-hidden="true"></i>
           </div>

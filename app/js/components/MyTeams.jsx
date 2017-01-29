@@ -24,11 +24,13 @@ class MyTeams extends React.Component {
     this.makeTeamTile = this.makeTeamTile.bind(this);
   }
 
-  makeTeamTile(data) {
+  makeTeamTile(data, index) {
     return (
       <TeamTile
         key={data.id}
         {...data}
+        onDeleteClick={() => {delete 
+          this.props.teams[index]; this.setState({});}}
       />
     );
   }
@@ -56,5 +58,15 @@ class MyTeams extends React.Component {
     );
   }
 }
+
+MyTeams.propTypes = {
+  onAddReservationClick: React.PropTypes.func,
+  teams: React.PropTypes.arrayOf(React.PropTypes.object)
+};
+
+MyTeams.defaultProps = {
+  onAddReservationClick: () => {},
+  teams: sampleTeams
+};
 
 export default MyTeams;
