@@ -48,18 +48,18 @@ class ReservationTile extends React.Component {
         onMouseLeave={this.handleMouseLeave}
         onClick={this.handleClick}
       >
-        {this.state.showDeleteButton ? (
+        {/*this.state.showDeleteButton ? (
           <div
             className="delete-button"
             onClick={this.props.handleDeleteClick}
           >
             <i className="fa fa-times" aria-hidden="true"></i>
           </div>
-        ) : (null)}
+        ) : (null)*/}
         <div className="accent">
         </div>
         <div className="info">
-          <h2>{this.props.type}</h2>
+          <h2>{this.props.name}</h2>
           <h4 className="date">
             {
               moment(this.props.startTime)
@@ -77,6 +77,12 @@ class ReservationTile extends React.Component {
         </div>
         <div className="room-number">
           <h1>{this.props.roomNumber}</h1>
+          <button
+            className="btn btn-danger"
+            onClick={this.handleDeleteClick}
+          >
+            Delete
+          </button>
         </div>
       </div>
     );
@@ -84,8 +90,7 @@ class ReservationTile extends React.Component {
 }
 
 ReservationTile.propTypes = {
-  type: React.PropTypes.string,
-  roomNumber: React.PropTypes.string,
+  name: React.PropTypes.string,
   startTime: React.PropTypes.string,
   endTime: React.PropTypes.string,
   onDeleteClick: React.PropTypes.func,
@@ -93,8 +98,8 @@ ReservationTile.propTypes = {
 };
 
 ReservationTile.defaultProps = {
-  onDeleteClick: () => {window.alert("DELTED!!");},
-  onClick: () => {window.alert("CLICKED!");}
+  onDeleteClick: () => {},
+  onClick: () => {}
 };
 
 export default ReservationTile;
