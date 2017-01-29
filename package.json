@@ -7,12 +7,10 @@
     "start": "NODE_ENV=development BABEL_ENV=development node ./server.js",
     "build": "NODE_ENV=production BABEL_ENV=production ./node_modules/.bin/webpack --config webpack.config.prod.js",
     "lint": "eslint --ext .js --ext .jsx app",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "webdriver": "chmod +x ./webdriverio-test/script/webdriver && ./webdriverio-test/script/webdriver",
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
-  "pre-commit": [
-    "validate",
-    "lint"
-  ],
   "author": "Dylan Vuz",
   "license": "MIT",
   "dependencies": {
