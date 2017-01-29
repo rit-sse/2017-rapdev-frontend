@@ -21,7 +21,7 @@ window.onload = () => {
         <Layout>
           <Match pattern="/" exactly render={() => (<Redirect to="/overview" />)} />
           <Match exactly pattern="/overview" component={Overview} />
-          <Match exactly pattern="/myTeams" component={Teams} />
+          <Match pattern="/myTeams" component={Teams} />
           <Match exactly pattern="/reservation" component={Reservations} />
         </Layout>
       </BrowserRouter>

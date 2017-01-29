@@ -1,6 +1,8 @@
 import React from 'react';
 import SubNav from '../components/SubNav';
 import MyTeams from '../components/MyTeams';
+import TeamDetail from '../components/TeamDetail';
+import {Match} from 'react-router';
 
 const Teams = () => (
   <div>
@@ -9,7 +11,8 @@ const Teams = () => (
         <div className="text-center">
           <SubNav />
         </div>
-        <MyTeams />
+        <Match pattern="/myTeams/:id" component={TeamDetail} />
+        <Match exactly pattern="/myTeams" component={MyTeams} />
       </div>
     </div>
   </div>

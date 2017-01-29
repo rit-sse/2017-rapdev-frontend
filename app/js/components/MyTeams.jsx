@@ -31,6 +31,8 @@ class MyTeams extends React.Component {
         {...data}
         onDeleteClick={() => {delete 
           this.props.teams[index]; this.setState({});}}
+          
+        onClick={() => this.context.router.transitionTo(`/myTeams/${data.id}`)}
       />
     );
   }
@@ -67,6 +69,10 @@ MyTeams.propTypes = {
 MyTeams.defaultProps = {
   onAddReservationClick: () => {},
   teams: sampleTeams
+};
+
+MyTeams.contextTypes = {
+  router: React.PropTypes.object
 };
 
 export default MyTeams;
