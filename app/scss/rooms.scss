@@ -1,0 +1,35 @@
+$grey: #A7A7A7;
+$green: #DEFDD0;
+$red: #FCC5C5;
+$white: white;
+$labRoomWidth: 200px;
+$labRoomHeight: 300px;
+
+.team-room {
+  border: 1px solid $grey;
+  height: 100px;
+  margin: 2.5% auto;
+  width: 75%;
+
+  &.empty {
+    background-color: $green;
+  }
+
+  &.full {
+    background-color: $red;
+  }
+
+  &.labbie {
+    background-color: $grey;
+  }
+}
+
+.lab-room {
+  background-color: $grey;
+  bottom: 0;
+  color: $white;
+  height: $labRoomHeight;
+  left: calc(50% - (#{$labRoomWidth} / 2));
+  position: absolute;
+  width: $labRoomWidth;
+}
