@@ -3,6 +3,7 @@ import { persistState } from 'redux-devtools'; // eslint-disable-line import/no-
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 import status from './status';
+import auth from './auth';
 
 function getDebugSessionKey() {
   const matches = window.location.href.match(/[?&]debug_session=([^&]+)\b/);
@@ -13,6 +14,7 @@ const store = createStore(
     rootReducer,
     compose(
       applyMiddleware(thunk, status),
+      applyMiddleware(thunk, auth),
       persistState(getDebugSessionKey()),
       window.devToolsExtension ? window.devToolsExtension() : f => f
     ),

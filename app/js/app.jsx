@@ -10,8 +10,8 @@ import 'scss/global.scss';
 
 if (module.hot) module.hot.accept();
 
-import { loadReservation } from './actions/reservation';
-window.test = () => store.dispatch(loadReservation());
+import { checkForUser } from './actions/auth';
+store.dispatch(checkForUser());
 
 const Teams = asyncComponent(() => System.import('./pages/Teams'));
 const Overview = asyncComponent(() => System.import('./pages/Overview'));
