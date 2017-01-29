@@ -18,8 +18,8 @@ class Login extends React.Component {
           <div className="login">
             <h2 className="login-heading">Login</h2>
             <form>
-              <input  ref={(c) => this.username = c }className="username" placeholder="username" type="text" />
-              <input ref={(c) => this.password = c } className="username" placeholder="password" type="text" />
+              <input ref={ (c) => this.username = c } className="username" id="usernameField" placeholder="username" type="text" />
+              <input ref={ (c) => this.password = c } className="username" id="passwordField" placeholder="password" type="password" />
             </form>
             <button onClick={this.submit} className="btn btn-outline-primary">submit</button>
           </div>
