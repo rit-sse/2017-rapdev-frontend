@@ -45,4 +45,8 @@ $labRoomHeight: 300px;
   left: calc(50% - (#{$labRoomWidth} / 2));
   position: absolute;
   width: $labRoomWidth;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }

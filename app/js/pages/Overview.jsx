@@ -44,7 +44,7 @@ class Overview extends React.Component {
         <h1>Room Status</h1>
         <div className="row" style={{ paddingTop: '5%'}}>
           <LabRoom name="The SSE" />
-          <div className='col-6 team-rooms'>
+          <div className='col-12 col-md-6 team-rooms'>
             <div className="row">
               {teamRooms.map(this.renderTeamRoom)}
             </div>
