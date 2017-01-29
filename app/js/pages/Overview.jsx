@@ -13,25 +13,25 @@ class Overview extends React.Component {
   renderTeamRoom(room) {
     return (
       <div key={room.id} className="col-6">
-        <TeamRoom status={room.status} />
+        <TeamRoom status={room.status} content={room.content} />
       </div>
     );
   }
 
   render() {
     const teamRooms = [
-      { id: 1, status: 'full' },
-      { id: 2, status: 'empty' },
-      { id: 3, status: 'empty' },
-      { id: 4, status: 'full' },
-      { id: 5, status: 'full' },
-      { id: 6, status: 'empty' },
-      { id: 7, status: 'empty' },
-      { id: 8, status: 'labbie' },
-      { id: 9, status: 'full' },
-      { id: 10, status: 'empty' },
-      { id: 11, status: 'empty' },
-      { id: 12, status: 'full' }
+      { id: 1, status: 'full', content: {} },
+      { id: 2, status: 'empty', content: {} },
+      { id: 3, status: 'empty', content: {} },
+      { id: 4, status: 'full', content: {} },
+      { id: 5, status: 'full', content: {} },
+      { id: 6, status: 'empty', content: {} },
+      { id: 7, status: 'empty', content: {} },
+      { id: 8, status: 'labbie', content: {text: 'Labbie Space'} },
+      { id: 9, status: 'full', content: {} },
+      { id: 10, status: 'empty', content: {} },
+      { id: 11, status: 'empty', content: {} },
+      { id: 12, status: 'full', content: {} }
     ];
 
     return (

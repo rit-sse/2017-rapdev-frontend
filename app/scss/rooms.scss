@@ -1,14 +1,21 @@
-$grey: #A7A7A7;
+$grey: #F0EFEF;
+$grey-darker: #A7A7A7;
 $green: #DEFDD0;
 $red: #FCC5C5;
-$white: white;
+$black: #333333;
 $labRoomWidth: 200px;
 $labRoomHeight: 300px;
 
 .team-room {
-  border: 1px solid $grey;
+  flex-direction: column;
+  border: 1px solid $grey-darker;
+  color: $black;
+  display: flex;
+  flex-direction: column;
   height: 100px;
+  justify-content: center;
   margin: 2.5% auto;
+  text-align: center;
   width: 75%;
 
   &.empty {
@@ -25,10 +32,14 @@ $labRoomHeight: 300px;
 }
 
 .lab-room {
+  align-content: center;
   background-color: $grey;
   bottom: 0;
-  color: $white;
+  color: $black;
+  display: flex;
+  flex-direction: column;
   height: $labRoomHeight;
+  justify-content: center;
   left: calc(50% - (#{$labRoomWidth} / 2));
   position: absolute;
   width: $labRoomWidth;
