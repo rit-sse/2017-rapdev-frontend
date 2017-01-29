@@ -10,10 +10,6 @@ import 'scss/global.scss';
 
 if (module.hot) module.hot.accept();
 
-// my testing
-import { loadRooms } from './actions/room';
-window.test = () => store.dispatch(loadRooms());
-
 const Teams = asyncComponent(() => System.import('./pages/Teams'));
 const Overview = asyncComponent(() => System.import('./pages/Overview'));
 const Reservations = asyncComponent(() => System.import('./pages/Reservations'));

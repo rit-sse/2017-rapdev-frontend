@@ -44,7 +44,7 @@ $tileAccentColorEmp: #70CCD9;
   cursor: pointer;
   z-index: 100;
   .delete-button {
-    pointer-events:all;
+    pointer-events: all;
     position: absolute;
     right: -8px;
     top: -8px;
@@ -80,7 +80,6 @@ $tileAccentColorEmp: #70CCD9;
     position: absolute;
     right: 0;
     height: 100%;
-    padding-right: 20px;
     margin-top: 13px;
     h1 {
       vertical-align: middle;
