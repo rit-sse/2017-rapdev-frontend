@@ -4,6 +4,7 @@ import auth from './auth';
 import status from './status';
 import room from './room';
 import reservation from './reservation';
+import feature from './feature';
 
 const rootReducer = combineReducers({
   nav,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   status,
   room,
   reservation,
+  feature,
 });
 
 export default rootReducer;
