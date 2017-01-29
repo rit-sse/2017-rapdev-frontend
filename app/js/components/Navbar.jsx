@@ -6,7 +6,10 @@ const Navbar = props => (
   <nav className="navbar-rapdev">
     <Link className="navbar-brand" to="/">Logo</Link>
     <button onClick={props.toggleDropdown} className="navbar-user" to="/user">User&nbsp;&nbsp;<i className="fa fa-caret-down" aria-hidden="true" /></button>
-    <div className={props.userDropdown ? 'dropdown opened' : 'dropdown'}>swag</div>
+    <button
+      className={props.userDropdown ? 'dropdown opened' : 'dropdown'}
+      onClick={() => props.loginClicked()}
+    >Login</button>
   </nav>
 );
 
