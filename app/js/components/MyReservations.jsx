@@ -60,6 +60,7 @@ class MyReservations extends React.Component {
   }
 
   render() {
+    // console.log()
     return (
       <div className="col-12">
         <div className="my-reservations-container">
@@ -88,12 +89,14 @@ class MyReservations extends React.Component {
 
 MyReservations.propTypes = {
   onAddReservationClick: React.PropTypes.func,
-  reservations: React.PropTypes.arrayOf(React.PropTypes.object)
+  reservations: React.PropTypes.arrayOf(React.PropTypes.object),
+  showNewReservationEditor: React.PropTypes.bool
 };
 
 MyReservations.defaultProps = {
   onAddReservationClick: () => {},
-  reservations: sampleReservations
+  reservations: sampleReservations,
+  showNewReservationEditor: false
 };
 
 export default MyReservations;

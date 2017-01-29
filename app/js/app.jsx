@@ -15,7 +15,7 @@ store.dispatch(checkForUser());
 
 const Teams = asyncComponent(() => System.import('./pages/Teams'));
 const Overview = asyncComponent(() => System.import('./pages/Overview'));
-const Reservations = asyncComponent(() => System.import('./pages/Reservations'));
+const Reservations = asyncComponent(() => System.import('./containers/Reservations'));
 
 window.onload = () => {
   render(
