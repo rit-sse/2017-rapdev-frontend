@@ -20,18 +20,18 @@ class Overview extends React.Component {
 
   render() {
     const teamRooms = [
-      { id: 1, status: 'full', content: {} },
-      { id: 2, status: 'empty', content: {} },
-      { id: 3, status: 'empty', content: {} },
-      { id: 4, status: 'full', content: {} },
-      { id: 5, status: 'full', content: {} },
-      { id: 6, status: 'empty', content: {} },
-      { id: 7, status: 'empty', content: {} },
+      { id: 1, status: 'full', content: {text: 'Senior Project'} },
+      { id: 2, status: 'empty', content: {text: ''} },
+      { id: 3, status: 'empty', content: {text: ''} },
+      { id: 4, status: 'full', content: {text: 'Co-Lab Class'} },
+      { id: 5, status: 'full', content: {text: 'Co-Lab Class'} },
+      { id: 6, status: 'empty', content: {text: ''} },
+      { id: 7, status: 'empty', content: {text: ''} },
       { id: 8, status: 'labbie', content: {text: 'Labbie Space'} },
-      { id: 9, status: 'full', content: {} },
-      { id: 10, status: 'empty', content: {} },
-      { id: 11, status: 'empty', content: {} },
-      { id: 12, status: 'full', content: {} }
+      { id: 9, status: 'full', content: {text: 'Student'} },
+      { id: 10, status: 'empty', content: {text: ''} },
+      { id: 11, status: 'empty', content: {text: ''} },
+      { id: 12, status: 'full', content: {text: 'Student'} }
     ];
 
     return (
