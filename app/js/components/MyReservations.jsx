@@ -4,34 +4,6 @@ import moment from 'moment';
 
 import ReservationTile from './ReservationTile';
 
-const sampleReservations = [
-  {
-    id: 1,
-    name: "Just You",
-    roomNumber: "1661",
-    startTime: "2017-01-28T22:30:00+00:00",
-    endTime: "2017-01-28T23:00:00+00:00"
-  },{
-    id: 2,
-    name: "Senior Project",
-    roomNumber: "1662",
-    startTime: "2017-01-30T22:30:00+00:00",
-    endTime: "2017-01-30T23:00:00+00:00"
-  },{
-    id: 3,
-    name: "Student Team",
-    roomNumber: "1662",
-    startTime: "2017-02-04T22:30:00+00:00",
-    endTime: "2017-02-04T23:00:00+00:00"
-  },{
-    id: 4,
-    name: "Just You",
-    roomNumber: "1662",
-    startTime: "2017-01-29T22:30:00+00:00",
-    endTime: "2017-01-29T23:00:00+00:00"
-  }
-];
-
 class MyReservations extends React.Component {
   constructor(props) {
     super(props);
@@ -95,7 +67,6 @@ MyReservations.propTypes = {
 
 MyReservations.defaultProps = {
   onAddReservationClick: () => {},
-  reservations: sampleReservations,
   showNewReservationEditor: false
 };
 

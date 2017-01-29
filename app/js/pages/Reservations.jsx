@@ -12,6 +12,7 @@ const Reservations = props => (
         </div>
         <MyReservations
           onAddReservationClick={props.onAddReservationClick}
+          reservations={props.reservations}
         />
         {props.showNewReservationEditor ? (<ReservationEditor />) : null}
       </div>
@@ -21,7 +22,8 @@ const Reservations = props => (
 
 Reservations.propTypes = {
   onAddReservationClick: React.PropTypes.func,
-  showNewReservationEditor: React.PropTypes.bool
+  showNewReservationEditor: React.PropTypes.bool,
+  reservations: React.PropTypes.arrayOf(React.PropTypes.object)
 };
 
 Reservations.defaultProps = {
