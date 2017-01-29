@@ -1,4 +1,5 @@
-http://*:80 {
+ssedev.se.rit.edu {
+  tls tech@sse.rit.edu
   root ./dist/
   rewrite {
     if {path} not_match \/api/.*
