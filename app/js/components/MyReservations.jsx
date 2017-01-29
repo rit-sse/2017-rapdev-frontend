@@ -39,11 +39,12 @@ class MyReservations extends React.Component {
     this.sortReservations = this.sortReservations.bind(this);
   }
 
-  makeReservationTile(data) {
+  makeReservationTile(data, index) {
     return (
       <ReservationTile
         key={data.id}
         {...data}
+        onDeleteClick={() => {delete this.props.reservations[index]; this.setState({});}}
       />
     );
   }
@@ -74,7 +75,10 @@ class MyReservations extends React.Component {
             </div>
           </div>
           <div className="my-reservations-list">
-            {sampleReservations.sort(this.sortReservations).map(this.makeReservationTile)}
+            {(this.props.reservations.length <= 0) ? 
+              (<h2>No Reservations</h2>) : (null)
+            }
+            {this.props.reservations.sort(this.sortReservations).map(this.makeReservationTile)}
           </div>
         </div>
       </div>
@@ -83,11 +87,13 @@ class MyReservations extends React.Component {
 }
 
 MyReservations.propTypes = {
-  onAddReservationClick: React.PropTypes.func
+  onAddReservationClick: React.PropTypes.func,
+  reservations: React.PropTypes.arrayOf(React.PropTypes.object)
 };
 
 MyReservations.defaultProps = {
-  onAddReservationClick: () => {}
+  onAddReservationClick: () => {},
+  reservations: sampleReservations
 };
 
 export default MyReservations;
