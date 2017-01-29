@@ -7,8 +7,24 @@ $tileAccentColorEmp: #70CCD9;
 
 
 .my-reservations-container {
-  & > h1 {
-    text-align: left;
+  & .header {
+    width: 100%;
+    position: relative;
+    padding-bottom: 16px;
+    & > h1 {
+      text-align: left;
+      display: inline;
+    }
+  }
+  .new-reservation-container {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    display: inline-block;
+    & .add-reservation {
+      display: inline-block;
+      height: 100%;
+    }
   }
 }
 

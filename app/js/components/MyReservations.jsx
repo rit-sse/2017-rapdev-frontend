@@ -62,7 +62,17 @@ class MyReservations extends React.Component {
     return (
       <div className="col-12">
         <div className="my-reservations-container">
-          <h1>My Reservations</h1>
+          <div className="header">
+            <h1>My Reservations</h1>
+            <div className="new-reservation-container">
+              <button
+                className="add-reservation btn btn-secondary"
+                onClick={this.props.onAddReservationClick}
+              >
+                <i className="fa fa-plus"></i> New Reservation
+              </button>
+            </div>
+          </div>
           <div className="my-reservations-list">
             {sampleReservations.sort(this.sortReservations).map(this.makeReservationTile)}
           </div>
@@ -71,5 +81,13 @@ class MyReservations extends React.Component {
     );
   }
 }
+
+MyReservations.propTypes = {
+  onAddReservationClick: React.PropTypes.func
+};
+
+MyReservations.defaultProps = {
+  onAddReservationClick: () => {}
+};
 
 export default MyReservations;
