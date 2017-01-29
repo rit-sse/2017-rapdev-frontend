@@ -9,15 +9,10 @@
     "lint": "eslint --ext .js --ext .jsx app",
     "validate": "npm ls"
   },
-  "pre-commit": [
-    "validate",
-    "lint"
-  ],
   "author": "Dylan Vuz",
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",
-    "http-proxy-middleware": "^0.17.3",
     "moment": "^2.17.1",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",

@@ -4,15 +4,11 @@ import { AUTH_TOKEN_KEY } from '../store/auth';
 export default function auth(state = {}, action) {
   // Init
   const token = localStorage.getItem(AUTH_TOKEN_KEY);
-  if (token !== null) {
+  if (token !== null && state.token === undefined) {
     return {
       ...state,
       loggedIn: true,
       token,
-    };
-  } else {
-    return {
-      loggedIn: false,
     };
   }
   // Normal flow
