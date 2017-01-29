@@ -25,12 +25,18 @@ export const api = (url, options = {}) => {
   return (dispatch, getState) => {
     const token = getState().auth.token;
     const headers = Object.assign({}, {
-      'Authorization': 'bearer ' + token,
+      'Authorization': 'Bearer ' + token,
       'content-type': 'application/json',
     }, options.headers);
     options.headers = headers;
     // TODO error check
     return fetch(url, options)
-      .then(res => res.json());
+      .then(res => {
+        if ([200].indexOf(res.status) > -1) {
+          return res.json();
+        } else {
+          return {};
+        }
+      });
   };
 };

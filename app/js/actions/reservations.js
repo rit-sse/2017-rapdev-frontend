@@ -36,3 +36,12 @@ export const loadReservation = () => {
   }
 }
 
+export function createReservation(reservation) {
+  return (dispatch) => {
+    return dispatch(api('/api/v1/reservation', {
+      method: 'POST',
+      body: JSON.stringify(reservation)
+    }))
+    .then(res => console.log(res));
+  };
+}

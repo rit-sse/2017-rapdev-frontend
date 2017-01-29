@@ -5,13 +5,17 @@ import { Match, BrowserRouter, Redirect } from 'react-router';
 import store from './store';
 import Layout from './containers/Layout';
 import asyncComponent from './components/asyncComponent';
+import { checkForUser } from './actions/auth';
 
 import 'scss/global.scss';
 
 if (module.hot) module.hot.accept();
 
-import { checkForUser } from './actions/auth';
 store.dispatch(checkForUser());
+
+import { createReservation } from './actions/reservations';
+
+window.test = (ops) => store.dispatch(createReservation(ops));
 
 const Teams = asyncComponent(() => System.import('./pages/Teams'));
 const Overview = asyncComponent(() => System.import('./pages/Overview'));
