@@ -65,7 +65,7 @@ export function signOut() {
 export function checkForUser() {
   return (dispatch, getState) => {
     dispatch({ type: LOADING_STATUS });
-    if (getState().auth.user === undefined) {
+    if (getState().auth.user === undefined && getState().auth.token !== undefined) {
       return dispatch(updateWithToken(getState().auth.token));
     }
   };

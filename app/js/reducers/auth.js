@@ -1,7 +1,7 @@
 import { SIGN_IN, SIGN_OUT, SIGN_IN_UPDATE_USER } from '../actions/auth';
 import { AUTH_TOKEN_KEY } from '../store/auth';
 
-export default function auth(state = {}, action) {
+export default function auth(state = { loggedIn: false }, action) {
   // Init
   const token = localStorage.getItem(AUTH_TOKEN_KEY);
   if (token !== null && state.token === undefined) {
