@@ -68,6 +68,12 @@ $tileAccentColorEmp: #70CCD9;
   }
   &.emp {
     background-color: $tileColorEmp;
+    & > .accent {
+      display: inline-block;
+      height: 100%;
+      width: 20px;
+      background-color: $tileAccentColorEmp;
+    }
   }
   .room-number {
     display: inline-block;
