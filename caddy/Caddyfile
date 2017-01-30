@@ -1,4 +1,4 @@
-ssedev.se.rit.edu {
+http://* {
   tls tech@sse.rit.edu
   root ./dist/
   rewrite {
