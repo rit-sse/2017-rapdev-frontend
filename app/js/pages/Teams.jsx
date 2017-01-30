@@ -1,7 +1,7 @@
 import React from 'react';
 import SubNav from '../components/SubNav';
 import MyTeams from '../components/MyTeams';
-import TeamDetail from '../components/TeamDetail';
+import TeamDetail from '../containers/TeamDetail';
 import {Match} from 'react-router';
 
 const Teams = () => (
